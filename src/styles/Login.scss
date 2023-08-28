@@ -1,0 +1,162 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.header{
+  background-color:#0F172A;
+  padding: .5rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3em;
+
+}
+.brand{
+  color: white;
+  font-size: xx-large;
+  font-weight: 700;
+  display: inline;
+  margin-left: 0.4rem;
+  position: relative;
+  top: -.2rem;
+  
+}
+.Logo {
+    width: 35px;
+  }
+
+  
+.login-wrapper {
+  background-color: white !important;
+  height: 100vh;
+  width: 100vw;
+  .login-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    font-family: system-ui;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    top: -24px;
+    margin-bottom: .2rem;
+    font-weight: 800;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .sub-heading {
+    color: white;
+    font-weight: 800;
+   
+    margin: 1em;
+    margin-top: -20px;
+    font-family: system-ui;
+  }
+}
+
+.login-btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px grey;
+  transition: .2s;
+}
+
+.login-btn:hover {
+  background-color: #041844
+}
+
+.auth-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  
+}
+.common-input{
+    background-color: #fcfcfa;
+    color:#212121;
+    border: .5px solid rgb(208, 207, 207);
+    padding: .8rem;
+    border-radius: 14px 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+input[type='password']{
+  margin-bottom: 1rem;
+}
+
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+  margin-top: .9rem;
+  &:before {
+    content: "";
+    // use the linear-gradient for the fading effect
+    // use a solid background color for a solid bar
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    // this is really the only tricky part, you need to specify the background color of the container element...
+    color: #ffffff;
+    background-color: #fcfcfa00;
+  }
+}
+
+.google-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+  .google-btn {
+    width: 300px !important;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .go-to-signup {
+    font-size: 18px;
+  }
+
+  .join-now {
+    color: #ffffff;
+    font-family: system-ui;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
