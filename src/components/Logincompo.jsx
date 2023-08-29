@@ -6,6 +6,7 @@ import GoogleButton from 'react-google-button'
 import { LoadingButton } from '@mui/lab'
 import '../styles/Login.scss'
 import logo from '../assets/logo.png'
+import background from '../assets/dddepth-346.jpg'
 export default function Logincompo() {
   let navigate = useNavigate();
   const [credentails, setCredentials ]= useState({});
@@ -33,7 +34,7 @@ export default function Logincompo() {
   }
   
   return (
-    <div className="login-wrapper bg-[url(./src/assets/dddepth-346.jpg)] bg-no-repeat bg-cover">
+    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper bg-[url(./src/assets/dddepth-346.jpg)] bg-no-repeat bg-cover">
       <div className="header flex justify-center items-center gap-4">
       <img src={logo} className="w-10 h-8" />
       <span className='brand mt-1'>DevDeck</span>

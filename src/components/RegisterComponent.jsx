@@ -8,6 +8,7 @@ import { LoadingButton } from '@mui/lab';
 import { getUID } from '../helpers/getUniqueID'
 import '../styles/Login.scss'
 import logo from '../assets/logo.png'
+import background from '../assets/dddepth-152.jpg'
 export default function RegisterComponent() {
   let navigate = useNavigate();
   const [credentials, setCredentials ]= useState({});
@@ -18,7 +19,7 @@ export default function RegisterComponent() {
     try{
       setLoading(true);
        await RegisterAPI(credentials.email, credentials.password);
-      // if (res && res.user && res.user.email) {
+      
         postUserData({ 
           userID:getUID(),
           name:credentials.name, 
@@ -28,9 +29,7 @@ export default function RegisterComponent() {
         localStorage.setItem("userEmail", credentials.email);
         localStorage.setItem("userName", credentials.name);
 
-      // } else {
-      //   console.error("User or user email is undefined");
-      // }
+    
     }
     catch(error){
       console.error("error",error.message);
@@ -44,7 +43,7 @@ export default function RegisterComponent() {
   }
   //mtahakhan2003 @gmail.com
   return (
-    <div className="login-wrapper bg-[url('./src/assets/dddepth-152.jpg')] bg-no-repeat bg-cover">
+    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper bg-no-repeat bg-cover">
       <div className="header flex justify-center items-center gap-4">
       <img src={logo} className="w-10 h-8"  />
       <span className='text-white font-bold text-3xl'>DevDeck</span>
