@@ -6,7 +6,6 @@ import { getCurrentTimeStamp } from '../../../helpers/useMoment'
 import { getUID } from '../../../helpers/getUniqueID'
 import {uploadPostImage} from '../../../api/StorageAPI'
 import './index.scss'
-
 export default function NewPost( { currentUser }) {
   
   
