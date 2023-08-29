@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState} from 'react'
 import ProfileCard from './common/ProfileCard/ProfileCard'
 import ProfileEdit from './common/ProfileEdit/edit';

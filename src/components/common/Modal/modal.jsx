@@ -1,3 +1,4 @@
+import React from 'react';
 import {  Modal,Button } from 'antd';
 import { Loader } from 'rsuite';
 import {BiImage} from 'react-icons/bi'

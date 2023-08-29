@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useMemo} from 'react'
 import { useLocation } from 'react-router-dom';
 import { uploadImage as uploadImageAPI } from '../../../api/StorageAPI';

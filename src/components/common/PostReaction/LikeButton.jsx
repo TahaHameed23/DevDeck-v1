@@ -1,3 +1,4 @@
+import React from 'react';
 import { BiUpvote, BiSolidUpvote, BiCommentDetail  } from 'react-icons/bi'
 import { LikePost,getLikesByUser, postComment,getComments, getCurrentUser } from '../../../api/FirestoreAPI'
 import { getUID } from '../../../helpers/getUniqueID'

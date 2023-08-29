@@ -1,3 +1,4 @@
+import React from 'react';
 import { Space, Spin } from 'antd';
 import './common.scss';
 

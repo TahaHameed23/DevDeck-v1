@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useMemo} from 'react'
 import { postStatus, getPosts} from "../../../api/FirestoreAPI"
 import ModalPopup from '../Modal/modal'

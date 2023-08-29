@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState} from 'react'
 import Logincompo from '../components/Logincompo'
 import { onAuthStateChanged } from 'firebase/auth'
