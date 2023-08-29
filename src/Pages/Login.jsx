@@ -1,5 +1,5 @@
 import { useEffect, useState} from 'react'
-import Logincompo from '../components/logincompo'
+import Logincompo from '../components/Logincompo'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebaseConfig'
 import { useNavigate } from 'react-router-dom';
