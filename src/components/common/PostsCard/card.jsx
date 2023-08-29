@@ -23,7 +23,7 @@ export default function PostsCard( {id, posts}) {
       </div>
       {currentUser.userID===posts.userID ?
       
-        <BsTrash className='cursor-pointer absolute left-[18rem] md:left-[38rem] lg:left-[44rem]' size={22} onClick={()=>deletePost(posts.id)}  />
+        <BsTrash className='cursor-pointer absolute left-[16rem] md:left-[38rem] lg:left-[44rem]' size={22} onClick={()=>deletePost(posts.id)}  />
   
       : <></>
       }
