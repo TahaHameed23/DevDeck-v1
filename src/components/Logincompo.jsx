@@ -5,7 +5,7 @@ import GoogleButton from 'react-google-button'
 import { LoadingButton } from '@mui/lab'
 import '../styles/Login.scss'
 import logo from '../assets/logo.png'
-export default function logincompo() {
+export default function Logincompo() {
   let navigate = useNavigate();
   const [credentails, setCredentials ]= useState({});
   const [error, setError] = useState(null);
