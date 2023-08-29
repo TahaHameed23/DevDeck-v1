@@ -1,6 +1,4 @@
-import React from 'react'
 import { Space, Spin } from 'antd';
-import { SpaceCompactItemContext } from 'antd/es/space/Compact';
 import './common.scss';
 
 function Loader() {

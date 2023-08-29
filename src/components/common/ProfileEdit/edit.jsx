@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { editProfile } from '../../../api/FirestoreAPI';
 
 export default function ProfileEdit({onEdit,currentUser}) {

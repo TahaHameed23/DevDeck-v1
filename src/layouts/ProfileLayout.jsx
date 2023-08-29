@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { getCurrentUser } from "../api/FirestoreAPI";
-import Topbar from "../components/common/Topbar";
+import Topbar from "../components/common/TopBar"
 import Profile from "../Pages/Profile";
 
 export default function ProfileLayout() {

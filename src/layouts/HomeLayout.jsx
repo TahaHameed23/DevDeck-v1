@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react'
+import {useMemo, useState} from 'react'
 import Home from '../Pages/Home'
 import { getCurrentUser } from '../api/FirestoreAPI'
 import TopBar from '../components/common/TopBar'
