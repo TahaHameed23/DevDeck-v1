@@ -1,11 +1,9 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { HiOutlineUserCircle } from  'react-icons/hi'
-import { MdOutlineNotifications} from 'react-icons/md'
-import { CNavbar } from '@coreui/react'
 import './index.scss'
 import logo from '../../../assets/logo.png'
-import ProfilePopup from '../ProfilePopup/profilepopup'
+import ProfilePopup from '../ProfilePopup/ProfilePopup'
 
 
 
