@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react'
+import {useState, useMemo} from 'react'
 import { postStatus, getPosts} from "../../../api/FirestoreAPI"
 import ModalPopup from '../Modal/modal'
 import PostsCard from '../PostsCard/card'
@@ -8,7 +8,7 @@ import {uploadPostImage} from '../../../api/StorageAPI'
 import './index.scss'
 
 export default function NewPost( { currentUser }) {
-  let userEmail = localStorage.getItem('userEmail');
+  
   
   const [status, setStatus] = useState('');
   const [allPosts, setAllPosts] = useState([]);
@@ -34,7 +34,7 @@ export default function NewPost( { currentUser }) {
   }, [])
   return (
     <div>
-    <div className='post-status text-center mb-8 sticky top-0 max-w-max mx-auto'>
+    <div className='post-status text-center mb-12 sticky top-0 max-w-max mx-auto'>
       <button className='open-post-modal bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-all duration-600 hover:px-8 mt-24' onClick={() => setModalOpen(true)}>
         Start a post
       </button>
