@@ -19,7 +19,7 @@ export default function NewPost( { currentUser }) {
     timeStamp:getCurrentTimeStamp('llll'),
     userEmail:currentUser.email,
     userName:currentUser.name,
-    userID: currentUser.userID,//changed
+    userID: currentUser.userID,
     postID:getUID(), 
     postImage:postImage,
   };
@@ -27,7 +27,8 @@ export default function NewPost( { currentUser }) {
   
     const sendStatus = async() =>{
         postStatus(object);
-        setModalOpen(false)
+        setModalOpen(false);
+        setStatus('');
   }
   useMemo(() =>{
     getPosts(setAllPosts);

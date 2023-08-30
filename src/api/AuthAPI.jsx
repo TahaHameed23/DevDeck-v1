@@ -15,7 +15,7 @@ export const LoginAPI = (email, password) =>{
 export const RegisterAPI = async(email, password) => {
     try{
         let response = await createUserWithEmailAndPassword(auth, email, password);
-        console.log(response.user.email);
+        
     }catch(err){
         return err
     }

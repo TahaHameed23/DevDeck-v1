@@ -11,7 +11,10 @@ const ModalPopup = ({modalOpen, setModalOpen, sendStatus ,setStatus, status,uplo
         title="Create a post"
         centered
         open={modalOpen}
-        onOk={() => {setModalOpen(false)
+        onOk={() => {
+                      setStatus('')
+                      setModalOpen(false)
+                      setPostImage('')
                       setPostImage('')}}
         onCancel={() => setModalOpen(false)}
         onEntered={() => input.current.focus()}
