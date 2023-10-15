@@ -34,7 +34,9 @@ export default function Logincompo() {
   }
   
   return (
-    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper bg-[url(./src/assets/dddepth-346.jpg)] bg-no-repeat bg-cover">
+    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} 
+    className="login-wrapper"
+    >
       <div className="header flex justify-center items-center gap-4">
       <img src={logo} className="w-10 h-8" />
       <span className='brand mt-1'>DevDeck</span>

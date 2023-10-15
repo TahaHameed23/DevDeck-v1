@@ -4,5 +4,5 @@ export const getCurrentTimeStamp = (timeFormat) =>{
     return moment().format(timeFormat);
 }
 export const CurrentTimeStamp = () => {
-    return moment().calendar();      
+    return moment().format("llll");      
 }
