@@ -6,7 +6,7 @@ import GoogleButton from 'react-google-button'
 import { LoadingButton } from '@mui/lab'
 import '../styles/Login.scss'
 import logo from '../assets/logo.png'
-import background from '../assets/dddepth-346.jpg'
+import background from '../assets/login-bg.webp'
 export default function Logincompo() {
   let navigate = useNavigate();
   const [credentails, setCredentials ]= useState({});
@@ -30,7 +30,7 @@ export default function Logincompo() {
   };
   const googleSignIn = () => {
     let response = GoogleSignInAPI();
-    console.log(response);
+    // console.log(response);
   }
   
   return (

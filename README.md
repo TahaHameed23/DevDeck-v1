@@ -13,4 +13,4 @@ Features:
 7. View other's profile. 
 8. Logout 
 
-Made using React + Vite.
+Made using React + TailwindCSS/SCSS.

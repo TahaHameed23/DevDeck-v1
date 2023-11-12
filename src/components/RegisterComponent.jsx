@@ -8,7 +8,7 @@ import { LoadingButton } from '@mui/lab';
 import { getUID } from '../helpers/getUniqueID'
 import '../styles/Login.scss'
 import logo from '../assets/logo.png'
-import background from '../assets/dddepth-152.jpg'
+import background from '../assets/register-bg.webp'
 export default function RegisterComponent() {
   let navigate = useNavigate();
   const [credentials, setCredentials ]= useState({});
@@ -43,10 +43,10 @@ export default function RegisterComponent() {
   }
   //mtahakhan2003 @gmail.com
   return (
-    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper bg-no-repeat bg-cover">
+    <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper">
       <div className="header flex justify-center items-center gap-4">
       <img src={logo} className="w-10 h-8"  />
-      <span className='text-white font-bold text-3xl'>DevDeck</span>
+      <span className='brand mt-1'>DevDeck</span>
       </div>
       <div className="login-wrapper-inner">
         <h1 className="heading">Sign In</h1>
