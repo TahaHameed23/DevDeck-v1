@@ -6,6 +6,7 @@ import LikeButton from '../PostReaction/LikeButton'
 import { BsTrash } from 'react-icons/bs'
 import { deletePost, getAllUsersImg, getCurrentUser } from '../../../api/FirestoreAPI'
 import { useState } from 'react'
+import pp from "../../../assets/blank-profile-picture.webp"
 export default function PostsCard( {id, posts}) {
   let navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({})
@@ -15,11 +16,11 @@ export default function PostsCard( {id, posts}) {
     getAllUsersImg(setAllUsers)
   },[])
   return (
-    <div className='bg-[rgba(255,255,255,0.25)] backdrop-blur-md m-2 mx-auto rounded-lg min-h-max p-4 w-[85vw] lg:w-[70vw]  flex flex-col justify-start sm:overflow-x-hidden'>
+    <div className='bg-[rgba(255,255,255,0.35)] backdrop-blur-lg m-2 mx-auto rounded-lg min-h-max p-4 w-[85vw] lg:w-[70vw]  flex flex-col justify-start sm:overflow-x-hidden'>
       <div className='-mb-2'>
         <img src={allUsers
           .filter((item) => item.id === posts.userID)
-          .map((item) => item.imageURL)} className='w-[60px] h-[60px] lg:w-[4em] lg:h-[4em] object-cover rounded-full bg-white'/>
+          .map((item) => item.imageURL ? item.imageURL : pp)} className='w-[60px] h-[60px] lg:w-[4em] lg:h-[4em] rounded-full bg-white'/>
       </div>
       {currentUser.userID===posts.userID ?
       
