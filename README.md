@@ -1,5 +1,7 @@
 
-# DevDeck ![logo](https://github.com/TahaHameed23/DevDeck/assets/89855847/68828793-3c3e-4639-9fe0-7f4037831be8)
+# DevDeck 
+
+![logo](https://github.com/TahaHameed23/DevDeck/assets/89855847/68828793-3c3e-4639-9fe0-7f4037831be8)
 
 
 **A community forum for developers where they can share there queries, thoughts, bugs and get it solved by others devs around.**
