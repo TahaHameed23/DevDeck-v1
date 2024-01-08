@@ -40,14 +40,15 @@ const ModalPopup = ({modalOpen, setModalOpen, sendStatus ,setStatus, status,uplo
             <label htmlFor="image"><BiImage  size={28} className='cursor-pointer absolute bottom-6 hover:bg-slate-300 rounded-md'
             /></label>
 
-            {postImage.length > 0 ?
+            {postImage.length > 0 
+            ?
             <div className='my-4'>
             <img src={postImage} className='w-40' alt="" />
             </div>
-             : <>
-             
-             </>}
-             <Loader size="md" backdrop='true' />
+             :
+            <></>
+            }
+            <Loader size="md" backdrop/>
             <input type="file" hidden id="image" 
             onChange={(event) => uploadPostImage(event.target.files[0],setPostImage)} />
             

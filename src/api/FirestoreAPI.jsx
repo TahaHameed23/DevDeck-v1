@@ -82,6 +82,25 @@ export const getSingleUser = (setCurrentUser, email) => {
     )
   })
 }
+
+
+export const getAllUsers = (setAllUsersData) => {
+  const q = query(userRef);
+  onSnapshot(q, (response) => {
+    setAllUsersData(response.docs.map((docs) => {
+      return {...docs.data(), id: docs.id}
+    }));
+  });
+};
+
+// export const getAllUsers = (userRef) => {
+//   const q = query(userRef);
+//   onSnapshot(q, (response) => {
+//     console.log(response.docs.map((docs) => {
+//       return {...docs.data(), id: docs.id}
+//     }))
+//   })
+// }
 export const editProfile = (userID, payload) =>{
     let userToEdit = doc(userRef, userID)
 

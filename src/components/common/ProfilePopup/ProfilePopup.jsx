@@ -21,7 +21,7 @@ export default function ProfilePopup() {
       <Button
         title="View Profile"
         onClick={() =>
-          navigate("/profile", {
+          navigate(`/profile/`, {
             state: {
               id: currentUser?.userID,
             },

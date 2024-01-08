@@ -42,12 +42,12 @@ export default function LikeButton({userId, postId, currentUser}) {
   return (
     <div>
     <div className='flex my-2 pt-3 border-t-2 border-slate-600 border-opacity-[.2]'>
-      <div onClick={handleClick} className='flex align-middle mx-2 p-2 cursor-pointer transition-all hover:bg-slate-400 hover:duration-500 active:duration-1000 active:ease-in-out rounded-md active:bg-slate-500'>
+      <div onClick={handleClick} className='flex align-middle mx-2 p-2 cursor-pointer transition-all hover:bg-slate-400 hover:duration-200 active:duration-1000 active:ease-in-out rounded-md active:bg-slate-500'>
         {liked ? <BiSolidUpvote size={22} /> :<BiUpvote size={22}/>}
         <p className='ml-2'>{liked ? 'Upvoted' : 'Upvote'} </p>
       <span className='mx-2 bg-slate-400 rounded-full px-2'>{likesCount}</span>
       </div>
-      <div onClick={() => setShowCommentBox(!showCommentBox)} className='flex align-middle mx-4 p-2 cursor-pointer hover:bg-slate-400 rounded-md transition-all duration-1000 focus:duration-700'>
+      <div onClick={() => setShowCommentBox(!showCommentBox)} className='flex align-middle mx-4 p-2 cursor-pointer hover:bg-slate-400 rounded-md transition-all duration-200 focus:duration-700'>
         <BiCommentDetail size={22}/>
         <p className='ml-2'>Comment</p>
       </div>

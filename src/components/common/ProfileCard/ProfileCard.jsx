@@ -1,11 +1,12 @@
 import React from 'react';
 import {useState, useMemo} from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 import { uploadImage as uploadImageAPI } from '../../../api/StorageAPI';
 import { getSingleStatus,getSingleUser } from '../../../api/FirestoreAPI';
 import PostsCard from '../PostsCard/card'
 import {Modal, Button, Progress} from 'antd';
 import { BiSolidEdit} from 'react-icons/bi';
+import pp from "../../../assets/blank-profile-picture.webp"
 
 export default function ProfileCard({ onEdit, currentUser }) {
   const [allPosts, setAllPosts] = useState([]);
@@ -73,10 +74,11 @@ const bgColor = image===true ? 'bg-blue-400' : ''
         {Object.values(currentProfile).length === 0 ? (
           <img src={Object.values(currentProfile).length === 0
             ? currentUser.imageURL
-            : currentProfile?.imageURL} alt="Profile-Image" className='w-32 h-32 rounded-full opacity-100 border-2 object-cover hover:opacity-60' onClick={() => setModalOpen(true)} />) : (
+            : currentProfile?.imageURL ? currentProfile.imageURL: pp  }
+             alt="Profile-Image" className='w-32 h-32 rounded-full opacity-100 border-2 object-cover hover:opacity-60' onClick={() => setModalOpen(true)} />) : (
             <img src={Object.values(currentProfile).length === 0
               ? currentUser.imageURL
-              : currentProfile?.imageURL} alt="Profile-Image" className='w-32 h-32 rounded-full opacity-100 border-2 object-cover hover:opacity-60' />
+              : currentProfile?.imageURL ? currentProfile.imageURL: pp} alt="Profile-Image" className='w-32 h-32 rounded-full opacity-100 border-2 object-cover hover:opacity-60' />
           )}
       </div>
         <div className='absolute right-5 top-4 cursor-pointer rounded-sm px-2'>
@@ -103,14 +105,15 @@ const bgColor = image===true ? 'bg-blue-400' : ''
           </div>
           <div className='flex'>
               
-              <a href={Object.values(currentProfile).length === 0
-                ? currentUser.website
-                : currentProfile?.website}
+              <Link reloadDocument='true' relative='path' to={Object.values(currentProfile).length === 0
+                ? `${currentUser.website}`//TODO: fix relative path
+                : `${currentProfile?.website}`}
                 className='text-blue-600 underline'>
                   {Object.values(currentProfile).length === 0
                 ? currentUser.website
                 : currentProfile?.website}
-              </a>
+                
+              </Link>
           </div>
           <div>
             <span><span className='font-semibold'>Skills: </span>

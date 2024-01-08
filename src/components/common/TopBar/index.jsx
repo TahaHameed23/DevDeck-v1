@@ -28,7 +28,7 @@ export default function Topbar({ currentUser }) {
   return (
     
   <div className='topbar-main bg-[#001341] flex relative justify-between py-4 px-6 overflow-y-hidden '>
-  <div className="flex items-center">
+  <div className="flex justify-center gap-x-10 items-center ">
       {popupVisible ? (
           <div className="fixed text-black py-3 px-2 right-[10px] top-[65px] z-50 rounded-lg ">
             <ProfilePopup className='cursor-pointer' />
@@ -36,10 +36,15 @@ export default function Topbar({ currentUser }) {
         ) : (
           <></>
         )}
-    <img src={logo} alt="Logo" className='md:mr-32 h-9 w-10 m-3 mr-12' />
-    <div className="mouse mr-12 md:mr-[18rem] lg:mx-56 lg:mr-64 text-xl font-semibold cursor-pointer" onClick={() => { goToRoute('/home') }}>
+    <img src={logo} alt="Logo" className='md h-9 w-10 m-3 mr-12' />
+    <div className="mouse text-xl font-semibold cursor-pointer" onClick={() => { goToRoute('/home') }}>
       Home
     </div>
+    
+    <div className="mouse text-xl font-semibold cursor-pointer" onClick={() => { goToRoute('/connect') }}>
+      Connection
+    </div>
+
     <div className="mouse text-xl font-semibold  cursor-pointer" onClick={() => { goToRoute('/news') }}>
       News
     </div>

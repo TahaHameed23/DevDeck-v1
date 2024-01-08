@@ -37,11 +37,11 @@ export default function RegisterComponent() {
       setError('Cannot create account!');
     }
   };
-  const googleSignIn = () => {
-    GoogleSignInAPI();
+  const googleSignIn = async() => {
+    await GoogleSignInAPI();
     navigate('/home');
   }
-  //mtahakhan2003 @gmail.com
+ 
   return (
     <div style={{background:`url(${background})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="login-wrapper">
       <div className="header flex justify-center items-center gap-4">

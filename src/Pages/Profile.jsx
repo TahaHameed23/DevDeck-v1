@@ -12,7 +12,7 @@ export default function Profile({ currentUser }) {
   useEffect(() => {
     onAuthStateChanged(auth, (res) => {
       if (!res?.accessToken) {
-        navigate("/");
+        navigate('/');
       } else {
         setLoading(false);
       }
