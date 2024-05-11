@@ -4,7 +4,7 @@ import Login from '../Pages/Login';
 import Resgister from '../Pages/Resgister';
 import HomeLayout from '../layouts/HomeLayout';
 import News from '../Pages/News';
-import ProfileLayout from '../layouts/ProfileLayout';
+import Profile from "../Pages/Profile"
 import Connection from "../Pages/Connection"
 import ERR_404 from '../Pages/404';
 export const router = createBrowserRouter([
@@ -27,8 +27,8 @@ export const router = createBrowserRouter([
         element: <News />
     },
     {
-        path: `/profile`,//TODO: add path to /profile/user_name
-        element: <ProfileLayout />
+        path: `/profile/`,//TODO: add path to /profile/user_name
+        element: <Profile />
     },
     {
         path: "/connect",

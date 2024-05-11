@@ -33,6 +33,7 @@ export default function ProfileCard({ onEdit, currentUser }) {
       getSingleStatus(setAllPosts, location?.state?.id);
     }
     if (location?.state?.email){
+      console.log("ok");
       getSingleUser(setCurrentProfile, location?.state?.email);
   
     }
